@@ -1,0 +1,19 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "api node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "Hallo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasbi001/apis.git"
+  },
+  "author": "Hasbi Ali Firdaus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasbi001/apis/issues"
+  },
+  "homepage": "https://github.com/hasbi001/apis#readme"
+}
