@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
     HOST: "localhost",
     USER: "root",
     PASSWORD: "",
@@ -10,25 +10,17 @@ module.exports = {
       acquire: 30000,
       idle: 10000
     }
-  };
-  
-  /*var Sequelize = require('sequelize');
-  
-  var sequelize = new Sequelize('mycv', 'root', '', {
-      host: 'localhost',
-      dialect: 'mysql',
-      port: 3306,
-      pool: {
-          max: 5,
-          min: 0,
-          acquire: 30000,
-          idle: 10000,
-      },
-  });
-  
-  var db = {};
-  
-  db.sequelize = sequelize;
-  db.Sequelize = Sequelize;
-  
-  module.exports = db;*/
+  };*/
+
+require("dotenv").config();
+
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(process.env.MONGO_PROD_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => console.log("Database connected!"))
+  .catch(err => console.log(err));
