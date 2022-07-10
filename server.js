@@ -37,7 +37,8 @@ app.get("/", (req, res) => {
 });
 
 // routes
-require("./app/routes/api.routes")(app);
+require("./app/routes/api.wishlist")(app);
+require("./app/routes/api.book")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

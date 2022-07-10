@@ -2,7 +2,6 @@ module.exports = mongoose => {
     var schema = mongoose.Schema(
       {
         article_id: String
-
       },
       { timestamps: true }
     );

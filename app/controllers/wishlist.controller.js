@@ -48,7 +48,7 @@ exports.findAll = (req, res) => {
 
 // Find a single Wishlist with an article_id
 exports.findOne = (req, res) => {
-  const id = req.params.article_id;
+  const id = req.params.id;
 
   Wishlist.findById(id)
     .then(data => {
@@ -71,7 +71,7 @@ exports.update = (req, res) => {
     });
   }
 
-  const id = req.params.article_id;
+  const id = req.params.id;
   
   Wishlist.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
     .then(data => {
@@ -90,7 +90,7 @@ exports.update = (req, res) => {
 
 // Delete a Wishlist with the specified id in the request
 exports.delete = (req, res) => {
-  const id = req.params.article_id;
+  const id = req.params.id;
 
   Wishlist.findByIdAndRemove({
     where: { article_id: id }
