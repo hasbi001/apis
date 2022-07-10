@@ -4,5 +4,5 @@ mongoose.Promise = global.Promise;
 const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
-db.tutorials = require("./wishlist.model.js")(mongoose);
+db.wishlist = require("./wishlist.model.js")(mongoose);
 module.exports = db;

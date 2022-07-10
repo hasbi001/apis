@@ -13,7 +13,7 @@ app.use(cors(corsOptions));
 
 // sync model
 const db = require("./app/models");
-db.mongoose.connect(db.url, {
+db.mongoose.connect("mongodb://localhost:27017/book", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
