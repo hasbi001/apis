@@ -14,13 +14,9 @@
 
 require("dotenv").config();
 
-const mongoose = require("mongoose");
+const mongodb = require("mongodb").MongoClient;
 
-mongoose
-  .connect(process.env.MONGO_PROD_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
-  .then(() => console.log("Database connected!"))
-  .catch(err => console.log(err));
+mongodb.connect('mongodb://localhost:27017/book', function (err, db) {
+  if (err) throw err;
+  console.log("Database connected!");
+});
